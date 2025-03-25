@@ -8,23 +8,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText phoneNumberEditText;
-    private Button callButton;
+    private EditText companyIdEditText;
+    private Button verifyButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        phoneNumberEditText = findViewById(R.id.phoneNumber);
-        callButton = findViewById(R.id.callButton);
+        companyIdEditText = findViewById(R.id.companyId);
+        verifyButton = findViewById(R.id.verifyButton);
 
-        callButton.setOnClickListener(new View.OnClickListener() {
+        verifyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String phoneNumber = phoneNumberEditText.getText().toString();
-                CallService callService = new CallService(MainActivity.this);
-                callService.makeCall(phoneNumber);
+                String companyId = companyIdEditText.getText().toString();
+                CompanyVerificationService verificationService = new CompanyVerificationService(MainActivity.this);
+                verificationService.verifyCompany(companyId);
             }
         });
     }
