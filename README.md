@@ -86,7 +86,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any inquiries, please contact the project maintainer at [email@example.com].
+For any inquiries, please contact the project maintainer at redinkvr@yahoo.com.
 
 ---
 
