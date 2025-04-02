@@ -15,7 +15,7 @@ public class CallService {
 
     public void makeCall(String phoneNumber) {
         if (phoneNumber == null || phoneNumber.isEmpty()) {
-            Toast.makeText(context, "Phone number is invalid", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "This phone number is invalid", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -24,7 +24,7 @@ public class CallService {
         try {
             context.startActivity(callIntent);
         } catch (SecurityException e) {
-            Toast.makeText(context, "Call permission not granted", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "The call permission not granted", Toast.LENGTH_SHORT).show();
         }
     }
 }
